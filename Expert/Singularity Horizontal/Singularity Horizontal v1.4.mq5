@@ -57,10 +57,10 @@ datetime lastBarTime;
 //| OnInit                                                           |
 //+------------------------------------------------------------------+
 int OnInit() {
-    emaHandle = iCustom(_Symbol, _Period, "Singularity EMA", InputEmaPeriod, 0,
+    emaHandle = iCustom(_Symbol, _Period, "p3pwp3p\\p3pwp3p EMA", InputEmaPeriod, 0,
                         MODE_EMA, InputEmaColor);
-    vwapHandle = iCustom(_Symbol, _Period, "Singularity VWAP");
-    trpHandle = iCustom(_Symbol, _Period, "Trend Ribbon Pro", 5);
+    vwapHandle = iCustom(_Symbol, _Period, "p3pwp3p\\p3pwp3p VWAP");
+    trpHandle = iCustom(_Symbol, _Period, "p3pwp3p\\Trend Ribbon Pro", 5);
     adxHandle = iADX(_Symbol, _Period, 14);
 
     if (emaHandle == INVALID_HANDLE || vwapHandle == INVALID_HANDLE ||
@@ -122,9 +122,6 @@ bool IsTradingTime() {
 
     return false;
 }
-
-// ... (나머지 CheckEntrySignal, Exit 로직은 기존 v1.61과 동일) ...
-// ... (전체 코드가 필요하면 다시 붙여넣겠습니다) ...
 
 //+------------------------------------------------------------------+
 //| 진입 로직 (Simple Mode)                                          |
